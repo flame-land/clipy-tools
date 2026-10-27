@@ -54,3 +54,27 @@ h1{font-size:23px;line-height:1.15;letter-spacing:-.7px;font-weight:600;margin:0
 /* Compact neutral interface */
 .brand,.kicker,.preview-heading,.section-title{display:none!important}
 .appbar{height:42px}.content{padding-top:24px}.login-layout{margin-top:6vh}.login-copy h1{font-size:16px;font-weight:500;letter-spacing:0}.page-heading h1{font-size:16px;font-weight:500;letter-spacing:0}.footerbar{justify-content:flex-start!important;height:24px}.login-copy{padding-bottom:16px}.login-actions{margin-top:14px}.login-preview{margin-top:16px}
+
+
+/* Grey on black theme */
+:root{color-scheme:dark;--bg:#0b0b0b;--panel:#141414;--panel2:#1d1d1d;--line:#383838;--text:#d0d0d0;--muted:#898989;--green:#bdbdbd;--green-dim:#222;--black:#0b0b0b}
+html,body,.shell,.main-area{background:#0b0b0b;color:#d0d0d0}
+.appbar,.footerbar{background:#101010;border-color:#303030;color:#888}
+.sidebar{background:#0e0e0e;border-color:#303030}
+.contextbar,.tool-list-head{background:#171717;border-color:#303030;color:#888}
+.contextbar strong{color:#d0d0d0}
+.menulinks{color:#999}.menulinks a:hover{color:#eee}
+.appbar-right,.small,.subtitle,.tool-info p,.preview-tool span,.activity-item span{color:#888}
+.side-link{color:#888}.side-link:hover,.side-link.active{color:#ddd;background:#242424;border-color:#414141}
+.button{background:#bdbdbd;color:#111;border-color:#bdbdbd}
+.button:hover{background:#e0e0e0;border-color:#e0e0e0}
+.button.secondary{background:#181818;border-color:#444;color:#ccc}
+.button.secondary:hover{background:#222;border-color:#777;color:#eee}
+.notice{background:#191919;border-color:#999;color:#ccc}
+.tool-list,.activity-list,.preview-tool,.preview-tool:last-child{border-color:#383838}
+.tool-row,.preview-tool,.activity-item{background:#121212;border-color:#2d2d2d;color:#ccc}
+.tool-row:hover,.preview-tool:hover{background:#1b1b1b}
+.tool-icon,.preview-tool-icon{background:#202020;border-color:#3b3b3b;color:#bbb}
+.preview-tool strong,.user-name{color:#d0d0d0}
+.crumb{color:#555}
+.status-dot{background:#aaa}
