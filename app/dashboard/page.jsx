@@ -38,7 +38,7 @@ export default async function Dashboard() {
                 <div className="activity-list">
                   <div className="activity-item">Discord account<span>Connected as @{user.username}</span></div>
                   <div className="activity-item">BGremover<span>{bgremoverUrl ? "Available" : "Currently unavailable"}</span></div>
-                  <div className="activity-item">Clipy Bot<span>Application settings are available in Discord Developer Portal.</span></div>
+                  <div className="activity-item">Clipy Bot<span>Discord bot tools</span></div>
                 </div>
               </section>
             </div>
