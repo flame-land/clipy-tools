@@ -15,9 +15,8 @@ export default async function Home({ searchParams }) {
   return (
     <main className="shell">
       <header className="appbar">
-        <a className="brand" href="/">clipy<span>.</span>tools</a>
         <nav className="menulinks"><a href="#tools">Tools</a><a href="https://discord.com" target="_blank" rel="noreferrer">Discord ↗</a></nav>
-        <div className="appbar-right">v1.0</div>
+        <div className="appbar-right"><a href="/api/auth/login">Sign in</a></div>
       </header>
       <div className="workspace">
         <aside className="sidebar" aria-label="Main navigation">
@@ -25,18 +24,15 @@ export default async function Home({ searchParams }) {
           <a className="side-link" href="#tools" aria-label="Tools" title="Tools">▦</a>
         </aside>
         <section className="main-area">
-          <div className="contextbar"><span>Clipy Tools</span><span className="crumb">/</span><strong>Workspace</strong></div>
+          <div className="contextbar"><strong>Home</strong></div>
           <div className="content">
             <div className="login-layout">
               <section className="login-copy">
-                <div className="kicker">CLIPY TOOLS / WORKSPACE</div>
-                <h1>Creator tools.</h1>
-                <p className="subtitle">Sign in to continue.</p>
+                <h1>Tools</h1>
                 {message && <div className="notice" role="alert">{message}</div>}
-                <div className="login-actions"><a className="button" href="/api/auth/login">Continue with Discord ↗</a></div>
+                <div className="login-actions"><a className="button" href="/api/auth/login">Sign in with Discord</a></div>
               </section>
               <section className="login-preview" id="tools" aria-label="Tools">
-                <p className="preview-heading">TOOLS</p>
                 <div className="preview-tools">
                   <a className="preview-tool" href="/api/auth/login"><div className="preview-tool-icon">◈</div><div className="preview-tool-copy"><strong>BGremover</strong><span>Video / Image</span></div><span className="preview-arrow">↗</span></a>
                   <a className="preview-tool" href="/api/auth/login"><div className="preview-tool-icon">⌁</div><div className="preview-tool-copy"><strong>Clipy Bot</strong><span>Discord</span></div><span className="preview-arrow">↗</span></a>
@@ -46,7 +42,7 @@ export default async function Home({ searchParams }) {
           </div>
         </section>
       </div>
-      <footer className="footerbar"><span>CLIPY TOOLS</span><span>READY</span></footer>
+      <footer className="footerbar"><span>Tools</span></footer>
     </main>
   );
 }
