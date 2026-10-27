@@ -20,10 +20,11 @@ export default async function Dashboard() {
         </div>
       </header>
       <section className="hero">
-        <div className="eyebrow">Dashboard</div>
-        <h1>Welcome back.</h1>
-        <p>Choose a tool to get started.</p>
+        <div className="eyebrow">Workspace / Overview</div>
+        <h1>Your tools.</h1>
+        <p>Pick a tool and get back to creating.</p>
       </section>
+      <div className="section-label">Available tools</div>
       <section className="grid">
         <article className="card">
           <div className="card-icon">✦</div>
@@ -34,13 +35,13 @@ export default async function Dashboard() {
             : <span className="small">Set BGREMOVER_URL in Vercel to enable this tool.</span>}
         </article>
         <article className="card">
-          <div className="card-icon">↗</div>
+          <div className="card-icon">⌘</div>
           <h2>Clipy Bot</h2>
-          <p>Use Clipy directly in your Discord server.</p>
-          <a className="button secondary" href="https://discord.com/developers/applications" target="_blank" rel="noreferrer">Open Discord Developer Portal ↗</a>
+          <p>Tools and commands for your Discord server.</p>
+          <a className="button secondary" href="https://discord.com/developers/applications" target="_blank" rel="noreferrer">Discord Developer Portal ↗</a>
         </article>
       </section>
-      <footer className="footer">Signed in as @{user.username}. Your dashboard session is protected.</footer>
+      <footer className="footer">Signed in as @{user.username} <span>·</span> Workspace session active</footer>
     </main>
   );
 }
