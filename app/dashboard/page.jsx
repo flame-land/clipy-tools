@@ -29,7 +29,7 @@ export default async function Dashboard() {
               <section>
                 <h2 className="section-title">Your tools</h2>
                 <div className="tool-list">
-                  <article className="tool-row"><div className="tool-icon">◈</div><div className="tool-info"><h2>BGremover</h2><p>Remove backgrounds from videos and images.</p></div><div className="tool-action">{bgremoverUrl ? <a className="button" href={bgremoverUrl} target="_blank" rel="noreferrer">Open ↗</a> : <span className="small">Not connected</span>}</div></article>
+                  <article className="tool-row"><div className="tool-icon">◈</div><div className="tool-info"><h2>BGremover</h2><p>Remove backgrounds from videos and images.</p></div><div className="tool-action">{bgremoverUrl ? <a className="button" href={bgremoverUrl} target="_blank" rel="noreferrer">Open ↗</a> : <span className="small">Unavailable</span>}</div></article>
                   <article className="tool-row"><div className="tool-icon">⌁</div><div className="tool-info"><h2>Clipy Bot</h2><p>Manage your Discord bot application.</p></div><div className="tool-action"><a className="button secondary" href="https://discord.com/developers/applications" target="_blank" rel="noreferrer">Open ↗</a></div></article>
                 </div>
               </section>
@@ -37,7 +37,7 @@ export default async function Dashboard() {
                 <h2 className="section-title">Workspace</h2>
                 <div className="activity-list">
                   <div className="activity-item">Discord account<span>Connected as @{user.username}</span></div>
-                  <div className="activity-item">BGremover<span>{bgremoverUrl ? "Service link configured" : "Set BGREMOVER_URL in Vercel to enable this tool."}</span></div>
+                  <div className="activity-item">BGremover<span>{bgremoverUrl ? "Available" : "Currently unavailable"}</span></div>
                   <div className="activity-item">Clipy Bot<span>Application settings are available in Discord Developer Portal.</span></div>
                 </div>
               </section>
