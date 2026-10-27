@@ -13,16 +13,16 @@ export default async function Dashboard() {
   return (
     <main className="shell">
       <header className="appbar">
-        <a className="brand" href="/">clipy<span>.</span>tools</a>
+        
         <nav className="menulinks"><a href="/dashboard">Workspace</a><a href="#tools">Tools</a></nav>
         <div className="appbar-right"><div className="user">{user.avatar && <img className="avatar" src={user.avatar} alt="" />}<span className="user-name">{user.globalName}</span><form action="/api/auth/logout" method="post"><button className="button secondary" type="submit">Log out</button></form></div></div>
       </header>
       <div className="workspace">
         <section className="main-area">
-          <div className="contextbar"><span>Workspace</span><span className="crumb">/</span><strong>Overview</strong></div>
+          <div className="contextbar"><strong>Workspace</strong></div>
           <div className="content">
             <div className="page-heading">
-              <div><div className="kicker">Your workspace</div><h1>Welcome back.</h1><p className="subtitle">Pick up where you left off.</p></div>
+              <div><h1>Tools</h1></div>
               <span className="small">Signed in as @{user.username}</span>
             </div>
             <div className="dashboard-grid" id="tools">
@@ -45,7 +45,7 @@ export default async function Dashboard() {
           </div>
         </section>
       </div>
-      <footer className="footerbar"><span>Clipy Tools</span><span><i className="status-dot" />Workspace</span></footer>
+      <footer className="footerbar"><span>Workspace</span></footer>
     </main>
   );
 }
