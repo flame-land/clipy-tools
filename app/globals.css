@@ -50,3 +50,7 @@ h1{font-size:23px;line-height:1.15;letter-spacing:-.7px;font-weight:600;margin:0
 .user{display:flex;align-items:center;gap:9px}.user-name{color:#333}.avatar{width:24px;height:24px;border-radius:50%;object-fit:cover}
 .status-dot{display:inline-block;width:6px;height:6px;background:#777;border-radius:50%;margin-right:5px}
 @media(max-width:650px){.appbar{height:44px;padding:0 12px;gap:14px}.menulinks{gap:12px}.menulinks a[href*="discord"]{display:none}.appbar-right{font-size:10px}.sidebar{width:40px}.content{padding:26px 14px 34px}.login-layout{margin-top:7vh}.login-copy h1{font-size:32px}.dashboard-grid{grid-template-columns:1fr;gap:24px}.page-heading{align-items:flex-start;flex-direction:column;margin-bottom:22px}.tool-row{gap:9px;padding:9px}.tool-info p{max-width:190px}.tool-action .button{padding:0 8px}.user-name{display:none}.contextbar{padding:0 12px}}
+
+/* Compact neutral interface */
+.brand,.kicker,.preview-heading,.section-title{display:none!important}
+.appbar{height:42px}.content{padding-top:24px}.login-layout{margin-top:6vh}.login-copy h1{font-size:16px;font-weight:500;letter-spacing:0}.page-heading h1{font-size:16px;font-weight:500;letter-spacing:0}.footerbar{justify-content:flex-start!important;height:24px}.login-copy{padding-bottom:16px}.login-actions{margin-top:14px}.login-preview{margin-top:16px}
