@@ -1,12 +1,12 @@
 const errors = {
   discord_denied: "Discord login was cancelled.",
   oauth_state: "Login could not be verified. Please try again.",
-  oauth_failed: "Discord login failed. Please try again.",
-  oauth_config: "Login setup is incomplete. Check the Discord OAuth environment variables in Vercel.",
-  oauth_token: "Discord rejected the login exchange. Check the Client Secret and exact Redirect URI in Vercel and Discord Developer Portal.",
-  oauth_user: "Discord approved login, but the profile could not be loaded. Try again.",
+  oauth_failed: "Discord login failed. Check the Vercel function logs for the cause.",
+  oauth_config: "Discord login is not configured. Check the Vercel environment variables.",
+  oauth_token: "Discord rejected the login exchange. Check the Client Secret and Redirect URI.",
+  oauth_user: "Discord approved login, but the profile could not be loaded.",
   oauth_network: "Could not reach Discord. Try again in a moment.",
-  oauth_session: "Login reached Clipy Tools, but the session could not be created. Check SESSION_SECRET in Vercel (at least 32 characters)."
+  oauth_session: "Login succeeded, but the session could not be created. Check SESSION_SECRET."
 };
 
 export default async function Home({ searchParams }) {
@@ -16,45 +16,33 @@ export default async function Home({ searchParams }) {
     <main className="shell">
       <header className="appbar">
         <a className="brand" href="/">clipy<span>.</span>tools</a>
-        <nav className="menulinks"><a href="#tools">Tools</a><a href="#workspace">Workspace</a><a href="https://discord.com" target="_blank" rel="noreferrer">Discord ↗</a></nav>
-        <div className="appbar-right"><span><i className="status-dot" />All systems</span><span>v1.0</span></div>
+        <nav className="menulinks"><a href="#tools">Tools</a><a href="https://discord.com" target="_blank" rel="noreferrer">Discord ↗</a></nav>
+        <div className="appbar-right">Creator tools</div>
       </header>
       <div className="workspace">
-        <aside className="sidebar">
-          <div><div className="side-heading">Workspace</div><a className="side-link active" href="#workspace"><span className="side-icon">▦</span>Overview</a><a className="side-link" href="#tools"><span className="side-icon">⌘</span>Tools</a></div>
-          <div><div className="side-heading">Applications</div><a className="side-link" href="#bgremover"><span className="side-icon">◈</span>BGremover</a><a className="side-link" href="#clipy"><span className="side-icon">⌁</span>Clipy Bot</a></div>
-          <div className="sidebar-bottom">CLIPY TOOLS<br/>Creator utilities<br/><span style={{color:"#6e6e77"}}>Workspace preview</span></div>
-        </aside>
         <section className="main-area">
-          <div className="contextbar"><span>Workspace</span><span className="crumb">/</span><strong>Overview</strong></div>
+          <div className="contextbar"><span>Clipy Tools</span><span className="crumb">/</span><strong>Home</strong></div>
           <div className="content">
-            <div className="login-layout" id="workspace">
+            <div className="login-layout">
               <section className="login-copy">
-                <div className="kicker">Creator workspace</div>
-                <h1>Your editing workflow, in one place.</h1>
-                <p className="subtitle">Open your tools, manage your creator setup, and get back to the timeline. Sign in with Discord to continue.</p>
+                <div className="kicker">Made for creators</div>
+                <h1>Tools for the work you make.</h1>
+                <p className="subtitle">Your creator utilities, in one place. Sign in with Discord to open your workspace.</p>
                 {message && <div className="notice" role="alert">{message}</div>}
-                <div className="login-actions"><a className="button" href="/api/auth/login">◈ &nbsp; Sign in with Discord</a></div>
+                <div className="login-actions"><a className="button" href="/api/auth/login">Continue with Discord <span aria-hidden="true">&nbsp;↗</span></a></div>
               </section>
-              <section className="panel login-preview" aria-label="Workspace preview">
-                <div className="panel-head"><span>Workspace overview</span><span className="subtle">LOCAL VIEW</span></div>
-                <div className="preview-tools" id="tools">
-                  <article className="preview-tool" id="bgremover"><div className="preview-tool-icon">◈</div><strong>BGremover</strong><span>Video & image tools</span></article>
-                  <article className="preview-tool" id="clipy"><div className="preview-tool-icon">⌁</div><strong>Clipy Bot</strong><span>Discord utilities</span></article>
-                </div>
-                <div className="workbench home-workbench" id="timeline">
-                  <div className="panel-head"><span>Composition · edit_01</span><span className="subtle">00:00:08:12</span></div>
-                  <div className="workbench-body">
-                    <div className="preview-pane"><div><div className="preview-frame" /><div className="preview-caption">Composition preview</div></div></div>
-                    <div className="timeline"><div className="timeline-title">TIMELINE / LAYERS</div><div className="ruler"><span>00:00</span><span>00:02</span><span>00:04</span><span>00:06</span><span>00:08</span></div><div className="track"><span /></div><div className="track"><span style={{width:"58%",background:"#514b76"}} /></div><div className="track audio"><span /></div></div>
-                  </div>
+              <section className="login-preview" id="tools" aria-label="Available tools">
+                <p className="preview-heading">Available tools</p>
+                <div className="preview-tools">
+                  <a className="preview-tool" href="/api/auth/login"><div className="preview-tool-icon">◈</div><div className="preview-tool-copy"><strong>BGremover</strong><span>Video and image background removal</span></div><span className="preview-arrow">↗</span></a>
+                  <a className="preview-tool" href="/api/auth/login"><div className="preview-tool-icon">⌁</div><div className="preview-tool-copy"><strong>Clipy Bot</strong><span>Discord creator utilities</span></div><span className="preview-arrow">↗</span></a>
                 </div>
               </section>
             </div>
           </div>
         </section>
       </div>
-      <footer className="footerbar"><span>Clipy Tools · Creator workspace</span><span>Ready</span></footer>
+      <footer className="footerbar"><span>Clipy Tools</span><span>Built for creators</span></footer>
     </main>
   );
 }
