@@ -1,7 +1,12 @@
 const errors = {
   discord_denied: "Discord login was cancelled.",
   oauth_state: "Login could not be verified. Please try again.",
-  oauth_failed: "Discord login failed. Please try again."
+  oauth_failed: "Discord login failed. Please try again.",
+  oauth_config: "Login setup is incomplete. Check the Discord OAuth environment variables in Vercel.",
+  oauth_token: "Discord rejected the login exchange. Check the Client Secret and exact Redirect URI in Vercel and Discord Developer Portal.",
+  oauth_user: "Discord approved login, but the profile could not be loaded. Try again.",
+  oauth_network: "Could not reach Discord. Try again in a moment.",
+  oauth_session: "Login reached Clipy Tools, but the session could not be created. Check SESSION_SECRET in Vercel (at least 32 characters)."
 };
 
 export default async function Home({ searchParams }) {
